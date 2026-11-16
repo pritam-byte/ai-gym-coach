@@ -153,10 +153,18 @@ Open **`http://localhost:8501`** in your browser and start your workout!
 
 ---
 
-## 👨‍💻 Author & Contact
+## 👨‍💻 Authors & Acknowledgments
 
 * **Developer**: Pritam Denria
-* **GitHub**: [@pritam-byte](https://github.com/pritam-byte)
-* **Repository**: [ai-gym-coach](https://github.com/pritam-byte/ai-gym-coach)
-* **Email**: [pritamdenria2005@gmail.com](mailto:pritamdenria2005@gmail.com)
+  * GitHub: [@pritam-byte](https://github.com/pritam-byte)
+  * Repository: [ai-gym-coach](https://github.com/pritam-byte/ai-gym-coach)
+  * Email: [pritamdenria2005@gmail.com](mailto:pritamdenria2005@gmail.com)
+
+---
+
+### 🌟 Special Thanks & Mentorship
+* **Project Mentor & Guide**: Prince Khunt
+  * GitHub: [@PrinceKhunt16](https://github.com/PrinceKhunt16)
+  * LinkedIn: [Prince Khunt](https://www.linkedin.com/in/prince-khunt-linked-in/)
+
 
