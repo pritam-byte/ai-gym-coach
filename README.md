@@ -123,8 +123,8 @@ AI-REALTIME-GYM-COACH-V2/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/AI-REALTIME-GYM-COACH-V2.git
-cd AI-REALTIME-GYM-COACH-V2
+git clone https://github.com/pritam-byte/ai-gym-coach.git
+cd ai-gym-coach
 ```
 
 ### 2. Set Up Environment
@@ -150,3 +150,13 @@ or
 streamlit run main.py
 ```
 Open **`http://localhost:8501`** in your browser and start your workout!
+
+---
+
+## 👨‍💻 Author & Contact
+
+* **Developer**: Pritam Denria
+* **GitHub**: [@pritam-byte](https://github.com/pritam-byte)
+* **Repository**: [ai-gym-coach](https://github.com/pritam-byte/ai-gym-coach)
+* **Email**: [pritamdenria2005@gmail.com](mailto:pritamdenria2005@gmail.com)
+
