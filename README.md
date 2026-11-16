@@ -138,6 +138,7 @@ pip install -r requirements.txt
 ### 3. Add API Keys
 Copy `.env.example` to `.env` and add your Groq API key:
 ```env
+
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
@@ -160,11 +161,5 @@ Open **`http://localhost:8501`** in your browser and start your workout!
   * Repository: [ai-gym-coach](https://github.com/pritam-byte/ai-gym-coach)
   * Email: [pritamdenria2005@gmail.com](mailto:pritamdenria2005@gmail.com)
 
----
-
-### 🌟 Special Thanks & Mentorship
-* **Project Mentor & Guide**: Prince Khunt
-  * GitHub: [@PrinceKhunt16](https://github.com/PrinceKhunt16)
-  * LinkedIn: [Prince Khunt](https://www.linkedin.com/in/prince-khunt-linked-in/)
 
 
