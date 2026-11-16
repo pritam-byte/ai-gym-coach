@@ -15,9 +15,9 @@
   --cyan-glow: rgba(0,212,255,0.15);
   --text:      #e8e8e8;
   --muted:     #666;
-  --font-display: 'Instrument Serif', serif;
-  --font-body:    'Ubuntu', monospace;
-  --font-body:    'Averta', sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body:    'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Consolas', monospace;
   --radius:    0px;
   --max-w:     1200px;
 }
