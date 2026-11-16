@@ -192,19 +192,32 @@ def main():
         st.markdown(
             """
             <div style="
-                border: 10px dashed #444;
+                background: #111111;
+                border: 1px solid rgba(245, 166, 35, 0.35);
                 border-radius: 0px;
-                padding: 48px 32px;
+                padding: 44px 32px;
                 text-align: center;
-                color: #888;
-                margin-top: 32px;
-                margin-bottom: 32px;
+                color: #e8e8e8;
+                margin-top: 24px;
+                margin-bottom: 24px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 30px rgba(245,166,35,0.1);
             ">
-                <h2 style="color:#ccc; margin-bottom:8px;">👈 Set your workout plan</h2>
-                <p style="font-size:1.05rem;">
-                    Choose your exercise, sets and reps in the sidebar,<br>
-                    then click <strong>Start Workout</strong> to activate the camera and AI coach.
+                <div style="display:inline-block; padding: 4px 12px; background: rgba(245,166,35,0.12); border: 1px solid rgba(245,166,35,0.3); font-size: 11px; letter-spacing: 0.14em; color: #f5a623; margin-bottom: 14px;">
+                    // WORKOUT READY · STANDBY MODE
+                </div>
+                <h2 style="color: #fff; font-family: 'Instrument Serif', serif; font-size: 32px; margin-bottom: 12px;">
+                    👈 Configure Your Workout in Sidebar
+                </h2>
+                <p style="font-size: 15px; color: #888; max-width: 520px; margin: 0 auto 20px; line-height: 1.6;">
+                    Choose an exercise, set your target Sets and Reps, then click <strong style="color: #f5a623;">Start Session</strong> to activate your camera & proactive AI voice coach.
                 </p>
+                <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 16px;">
+                    <span style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 6px 12px; font-size: 11px; letter-spacing: 0.08em; color: #aaa;">🦵 SQUATS</span>
+                    <span style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 6px 12px; font-size: 11px; letter-spacing: 0.08em; color: #aaa;">💪 PUSH-UPS</span>
+                    <span style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 6px 12px; font-size: 11px; letter-spacing: 0.08em; color: #aaa;">🏋️ BICEPS CURLS</span>
+                    <span style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 6px 12px; font-size: 11px; letter-spacing: 0.08em; color: #aaa;">🏋️‍♂️ SHOULDER PRESS</span>
+                    <span style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 6px 12px; font-size: 11px; letter-spacing: 0.08em; color: #aaa;">🏃 LUNGES</span>
+                </div>
             </div>
             """,
             unsafe_allow_html=True,

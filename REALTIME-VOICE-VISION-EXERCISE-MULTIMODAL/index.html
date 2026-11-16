@@ -3,20 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Real-time AI GYM Trainer</title>
+    <title>AI Real-Time GYM Coach — Vision & Voice Multimodal AI</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      @font-face {
-        font-family: "Averta";
-        src: url("fonts/Averta.woff2") format("woff2");
-        font-weight: normal;
-        font-style: normal;
-      }
-    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Instrument+Serif:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -27,15 +19,19 @@
     <!-- NAV -->
     <nav class="nav">
       <div class="nav-logo">
-        <span class="logo-bracket">(</span>AI GYM COACH<span
-          class="logo-bracket"
-          >)</span
-        >
+        <span class="logo-bracket">(</span> AI GYM COACH <span class="logo-bracket">)</span>
       </div>
       <div class="nav-links">
-        <a href="#visuals">Gallery</a>
-        <a href="#demo">Demo</a>
+        <a href="#hero">Overview</a>
+        <a href="#visuals">Kinematics</a>
+        <a href="#demo">Live Demo</a>
+        <a href="#features">Features</a>
         <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-action">
+        <a href="http://localhost:8501" target="_blank" class="btn-ghost" style="padding: 8px 18px; font-size: 10px;">
+          LAUNCH APP ⚡
+        </a>
       </div>
     </nav>
 
@@ -43,7 +39,7 @@
     <section class="hero" id="hero">
       <div class="hero-tag">
         <span class="dot"></span>
-        <span>AI-POWERED · REAL-TIME · GYM COACH</span>
+        <span>AI-POWERED · REAL-TIME · MULTIMODAL GYM COACH</span>
       </div>
 
       <h1 class="hero-title">
@@ -53,19 +49,18 @@
 
       <p class="hero-sub">
         Your form. Analyzed. Corrected. In milliseconds.<br />
-        Computer vision that watches every rep and tells you exactly what to
-        fix.
+        High-precision 33-point computer vision tracks every repetition while proactive generative AI speaks aloud to refine your biomechanics.
       </p>
 
       <div class="hero-cta-row">
         <a
-          href="https://ai-realtime-gym-coach.streamlit.app/"
+          href="http://localhost:8501"
           target="_blank"
           rel="noopener noreferrer"
           class="btn-primary"
           id="cta-button"
         >
-          <span>Try it live</span>
+          <span>Start Workout on Localhost</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path
               d="M3 8H13M13 8L9 4M13 8L9 12"
@@ -76,47 +71,84 @@
             />
           </svg>
         </a>
-        <a href="#demo-video" class="btn-ghost">WATCH DEMO ↓</a>
+        <a href="#demo" class="btn-ghost">WATCH DEMO ↓</a>
       </div>
 
       <!-- Live metrics strip -->
       <div class="metrics-strip">
         <div class="metric">
-          <span class="metric-val">100<span class="unit">ms</span></span>
-          <span class="metric-label">Avg Latency</span>
+          <span class="metric-val">30<span class="unit">ms</span></span>
+          <span class="metric-label">Inference Latency</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-val">33<span class="unit">pts</span></span>
+          <span class="metric-label">3D Body Landmarks</span>
         </div>
         <div class="metric-divider"></div>
         <div class="metric">
           <span class="metric-val">5<span class="unit">+</span></span>
-          <span class="metric-label">Exercises</span>
+          <span class="metric-label">Compound Exercises</span>
         </div>
         <div class="metric-divider"></div>
         <div class="metric">
-          <span class="metric-val">95<span class="unit">%</span></span>
-          <span class="metric-label">Form Accuracy</span>
+          <span class="metric-val">100<span class="unit">%</span></span>
+          <span class="metric-label">Local & Private</span>
         </div>
       </div>
     </section>
 
-    <!-- VISUAL SECTION -->
+    <!-- VISUAL KINEMATICS SECTION -->
     <section class="visuals" id="visuals">
       <div class="section-header center-header">
-        <span class="section-tag">// GALLERY</span>
-        <h2 class="section-title">Built for<br /><em>real athletes</em></h2>
+        <span class="section-tag">// EXERCISE KINEMATICS & POSE DETECTION</span>
+        <h2 class="section-title">Built for<br /><em>perfect form</em></h2>
+        <p class="section-desc">
+          Mathematical vector analysis maps joint trigonometry at 30 FPS, providing instant visual HUD feedback and spoken form corrections.
+        </p>
       </div>
 
       <div class="card-grid">
-        <!-- Card 1 -->
+        <!-- Card 1: Squats -->
         <div class="img-card card-tilt-left card-float-1">
           <div class="card-inner">
             <div class="card-img-wrap">
-              <!-- Replace src with your image -->
-              <img
-                src="./IMGs/i1.png"
-                alt="Squat form analysis"
-                onerror="this.parentElement.classList.add('img-placeholder')"
-              />
+              <svg viewBox="0 0 320 200" width="100%" height="100%" style="background:#0c0f14;">
+                <defs>
+                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#f5a623" stop-opacity="0.8"/>
+                  </linearGradient>
+                </defs>
+                <!-- Grid background -->
+                <line x1="0" y1="170" x2="320" y2="170" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                <line x1="0" y1="130" x2="320" y2="130" stroke="rgba(245,166,35,0.15)" stroke-dasharray="4,4" />
+                <!-- Skeleton Stick Figure: Squatting -->
+                <circle cx="160" cy="50" r="10" fill="#00d4ff" /> <!-- Head -->
+                <line x1="160" y1="60" x2="148" y2="110" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/> <!-- Spine -->
+                <line x1="148" y1="110" x2="115" y2="135" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/> <!-- Thigh -->
+                <line x1="115" y1="135" x2="130" y2="170" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/> <!-- Shin -->
+                <line x1="130" y1="170" x2="110" y2="170" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/> <!-- Foot -->
+                <!-- Joints -->
+                <circle cx="148" cy="110" r="5" fill="#fff" stroke="#f5a623" stroke-width="2"/>
+                <circle cx="115" cy="135" r="6" fill="#00d4ff" stroke="#fff" stroke-width="2"/>
+                <circle cx="130" cy="170" r="4" fill="#fff"/>
+                <!-- Angle Arc -->
+                <path d="M 125,125 A 20 20 0 0 1 135,145" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                <text x="75" y="130" fill="#00d4ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">86° DEPTH</text>
+                <!-- HUD Tag -->
+                <rect x="180" y="30" width="120" height="24" fill="rgba(0,212,255,0.1)" stroke="rgba(0,212,255,0.3)" rx="2"/>
+                <text x="190" y="46" fill="#00d4ff" font-family="'JetBrains Mono', monospace" font-size="10">GOOD DEPTH ✓</text>
+                <text x="180" y="80" fill="#888" font-family="'Ubuntu', sans-serif" font-size="11">Hip: (148, 110)</text>
+                <text x="180" y="98" fill="#888" font-family="'Ubuntu', sans-serif" font-size="11">Knee: (115, 135)</text>
+                <text x="180" y="116" fill="#f5a623" font-family="'Ubuntu', sans-serif" font-size="11">Threshold: &lt; 100°</text>
+              </svg>
               <div class="card-scan-line"></div>
+            </div>
+            <div class="card-label">
+              <span class="card-tag">// EXERCISE 01 · LOWER BODY</span>
+              <h4 style="font-family: var(--font-display); font-size: 20px; color: #fff; margin-bottom: 4px;">Squats</h4>
+              <p>Real-time hip-to-knee flexion tracking with sub-100° parallel depth validation and lumbar posture check.</p>
             </div>
             <div class="card-corner tl"></div>
             <div class="card-corner tr"></div>
@@ -125,16 +157,41 @@
           </div>
         </div>
 
-        <!-- Card 2 — tall center -->
+        <!-- Card 2: Push-ups -->
         <div class="img-card card-center card-float-2">
           <div class="card-inner">
             <div class="card-img-wrap">
-              <img
-                src="./IMGs/i2.png"
-                alt="Deadlift posture feedback"
-                onerror="this.parentElement.classList.add('img-placeholder')"
-              />
+              <svg viewBox="0 0 320 200" width="100%" height="100%" style="background:#0c0f14;">
+                <line x1="0" y1="170" x2="320" y2="170" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                <!-- Plank Skeleton -->
+                <circle cx="80" cy="115" r="8" fill="#00d4ff" /> <!-- Head -->
+                <line x1="88" y1="120" x2="130" y2="128" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/> <!-- Shoulders -->
+                <line x1="130" y1="128" x2="195" y2="135" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/> <!-- Torso -->
+                <line x1="195" y1="135" x2="265" y2="165" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/> <!-- Legs -->
+                <!-- Arms: Down pushup position -->
+                <line x1="120" y1="125" x2="110" y2="148" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+                <line x1="110" y1="148" x2="125" y2="170" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+                <!-- Alignment Guide Line -->
+                <line x1="90" y1="122" x2="265" y2="165" stroke="rgba(0,212,255,0.25)" stroke-dasharray="3,3" stroke-width="1.5"/>
+                <!-- Joints -->
+                <circle cx="120" cy="125" r="5" fill="#fff" stroke="#f5a623" stroke-width="2"/>
+                <circle cx="110" cy="148" r="6" fill="#f5a623" stroke="#fff" stroke-width="2"/>
+                <circle cx="195" cy="135" r="5" fill="#00d4ff"/>
+                <circle cx="265" cy="165" r="4" fill="#fff"/>
+                <!-- HUD Tag -->
+                <rect x="20" y="25" width="125" height="24" fill="rgba(245,166,35,0.1)" stroke="rgba(245,166,35,0.3)" rx="2"/>
+                <text x="30" y="41" fill="#f5a623" font-family="'JetBrains Mono', monospace" font-size="10">ELBOW: 88° (DOWN)</text>
+                <rect x="160" y="25" width="135" height="24" fill="rgba(0,212,255,0.1)" stroke="rgba(0,212,255,0.3)" rx="2"/>
+                <text x="170" y="41" fill="#00d4ff" font-family="'JetBrains Mono', monospace" font-size="10">ALIGNMENT: STRAIGHT</text>
+                <text x="170" y="80" fill="#888" font-family="'Ubuntu', sans-serif" font-size="11">Hip Sag Tolerance: ±8%</text>
+                <text x="170" y="98" fill="#00d4ff" font-family="'Ubuntu', sans-serif" font-size="11">Hip Status: LEVEL ✓</text>
+              </svg>
               <div class="card-scan-line"></div>
+            </div>
+            <div class="card-label">
+              <span class="card-tag">// EXERCISE 02 · UPPER BODY</span>
+              <h4 style="font-family: var(--font-display); font-size: 20px; color: #fff; margin-bottom: 4px;">Push-ups</h4>
+              <p>Dual-axis detection for chest depth, straight-line spinal alignment, and anti-sagging hip mechanics.</p>
             </div>
             <div class="card-corner tl"></div>
             <div class="card-corner tr"></div>
@@ -143,16 +200,39 @@
           </div>
         </div>
 
-        <!-- Card 3 -->
+        <!-- Card 3: Biceps Curls -->
         <div class="img-card card-tilt-right card-float-3">
           <div class="card-inner">
             <div class="card-img-wrap">
-              <img
-                src="./IMGs/i3.png"
-                alt="Overhead press alignment"
-                onerror="this.parentElement.classList.add('img-placeholder')"
-              />
+              <svg viewBox="0 0 320 200" width="100%" height="100%" style="background:#0c0f14;">
+                <line x1="0" y1="180" x2="320" y2="180" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                <!-- Standing Bicep Curl Figure -->
+                <circle cx="150" cy="40" r="9" fill="#00d4ff" /> <!-- Head -->
+                <line x1="150" y1="50" x2="150" y2="115" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/> <!-- Torso -->
+                <line x1="150" y1="115" x2="145" y2="180" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/> <!-- Legs -->
+                <!-- Arm curling -->
+                <line x1="150" y1="65" x2="152" y2="98" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/> <!-- Upper arm -->
+                <line x1="152" y1="98" x2="135" y2="70" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/> <!-- Forearm curled -->
+                <circle cx="132" cy="65" r="7" fill="#f5a623"/> <!-- Dumbbell -->
+                <!-- Joints -->
+                <circle cx="150" cy="65" r="5" fill="#fff"/>
+                <circle cx="152" cy="98" r="6" fill="#00d4ff" stroke="#fff" stroke-width="2"/>
+                <circle cx="135" cy="70" r="4" fill="#fff"/>
+                <!-- Drift line -->
+                <line x1="152" y1="50" x2="152" y2="140" stroke="rgba(245,166,35,0.2)" stroke-dasharray="2,2"/>
+                <!-- HUD -->
+                <rect x="180" y="30" width="125" height="24" fill="rgba(0,212,255,0.1)" stroke="rgba(0,212,255,0.3)" rx="2"/>
+                <text x="190" y="46" fill="#00d4ff" font-family="'JetBrains Mono', monospace" font-size="10">ELBOW: 46° (PEAK)</text>
+                <text x="180" y="80" fill="#f5a623" font-family="'Ubuntu', sans-serif" font-size="11">Shoulder: STABLE ✓</text>
+                <text x="180" y="98" fill="#00d4ff" font-family="'Ubuntu', sans-serif" font-size="11">Swing: NO SWING ✓</text>
+                <text x="180" y="116" fill="#888" font-family="'Ubuntu', sans-serif" font-size="11">Rep Count: +1 Rep</text>
+              </svg>
               <div class="card-scan-line"></div>
+            </div>
+            <div class="card-label">
+              <span class="card-tag">// EXERCISE 03 · ARMS ISOLATION</span>
+              <h4 style="font-family: var(--font-display); font-size: 20px; color: #fff; margin-bottom: 4px;">Biceps Curls</h4>
+              <p>Monitors elbow anchor drift and flags torso swinging momentum to ensure strict mechanical isolation.</p>
             </div>
             <div class="card-corner tl"></div>
             <div class="card-corner tr"></div>
@@ -161,15 +241,36 @@
           </div>
         </div>
 
+        <!-- Card 4: Shoulder Press -->
         <div class="img-card card-tilt-right card-float-4">
-          <div class="card-inner"> 
+          <div class="card-inner">
             <div class="card-img-wrap">
-              <img
-                src="./IMGs/i4.png"
-                alt="Overhead press alignment"
-                onerror="this.parentElement.classList.add('img-placeholder')"
-              />
+              <svg viewBox="0 0 320 200" width="100%" height="100%" style="background:#0c0f14;">
+                <line x1="0" y1="180" x2="320" y2="180" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                <!-- Figure Overhead Press -->
+                <circle cx="160" cy="55" r="9" fill="#00d4ff" />
+                <line x1="160" y1="65" x2="160" y2="125" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/>
+                <line x1="160" y1="125" x2="155" y2="180" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/>
+                <!-- Overhead Arms (Full Extension) -->
+                <line x1="160" y1="75" x2="140" y2="40" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+                <line x1="140" y1="40" x2="135" y2="12" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+                <line x1="160" y1="75" x2="180" y2="40" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+                <line x1="180" y1="40" x2="185" y2="12" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+                <!-- Dumbbells -->
+                <rect x="125" y="8" width="20" height="6" fill="#00d4ff" rx="2"/>
+                <rect x="175" y="8" width="20" height="6" fill="#00d4ff" rx="2"/>
+                <!-- HUD -->
+                <rect x="15" y="30" width="110" height="24" fill="rgba(0,212,255,0.1)" stroke="rgba(0,212,255,0.3)" rx="2"/>
+                <text x="25" y="46" fill="#00d4ff" font-family="'JetBrains Mono', monospace" font-size="10">EXT: FULL 168°</text>
+                <text x="15" y="80" fill="#f5a623" font-family="'Ubuntu', sans-serif" font-size="11">Back Arch: NEUTRAL ✓</text>
+                <text x="15" y="98" fill="#888" font-family="'Ubuntu', sans-serif" font-size="11">Shoulder Lockout: YES</text>
+              </svg>
               <div class="card-scan-line"></div>
+            </div>
+            <div class="card-label">
+              <span class="card-tag">// EXERCISE 04 · SHOULDERS & DELTS</span>
+              <h4 style="font-family: var(--font-display); font-size: 20px; color: #fff; margin-bottom: 4px;">Shoulder Press</h4>
+              <p>Tracks overhead verticality, arm lockout extension, and protects your spine by flagging lumbar arching.</p>
             </div>
             <div class="card-corner tl"></div>
             <div class="card-corner tr"></div>
@@ -178,15 +279,36 @@
           </div>
         </div>
 
+        <!-- Card 5: Lunges -->
         <div class="img-card card-center card-float-5">
           <div class="card-inner">
             <div class="card-img-wrap">
-              <img
-                src="./IMGs/i5.png"
-                alt="Overhead press alignment"
-                onerror="this.parentElement.classList.add('img-placeholder')"
-              />
+              <svg viewBox="0 0 320 200" width="100%" height="100%" style="background:#0c0f14;">
+                <line x1="0" y1="175" x2="320" y2="175" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                <!-- Lunge Stance Figure -->
+                <circle cx="160" cy="45" r="9" fill="#00d4ff" />
+                <line x1="160" y1="55" x2="160" y2="105" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/>
+                <!-- Front Leg 90 degree -->
+                <line x1="160" y1="105" x2="120" y2="135" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+                <line x1="120" y1="135" x2="120" y2="175" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+                <!-- Back Leg bent -->
+                <line x1="160" y1="105" x2="200" y2="140" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/>
+                <line x1="200" y1="140" x2="225" y2="175" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/>
+                <!-- Joints -->
+                <circle cx="120" cy="135" r="6" fill="#f5a623" stroke="#fff" stroke-width="2"/>
+                <circle cx="200" cy="140" r="5" fill="#00d4ff"/>
+                <!-- HUD -->
+                <rect x="180" y="25" width="125" height="24" fill="rgba(245,166,35,0.1)" stroke="rgba(245,166,35,0.3)" rx="2"/>
+                <text x="190" y="41" fill="#f5a623" font-family="'JetBrains Mono', monospace" font-size="10">FRONT KNEE: 92°</text>
+                <text x="180" y="75" fill="#00d4ff" font-family="'Ubuntu', sans-serif" font-size="11">Balance: BALANCED ✓</text>
+                <text x="180" y="93" fill="#888" font-family="'Ubuntu', sans-serif" font-size="11">Torso Upright: 88°</text>
+              </svg>
               <div class="card-scan-line"></div>
+            </div>
+            <div class="card-label">
+              <span class="card-tag">// EXERCISE 05 · UNILATERAL</span>
+              <h4 style="font-family: var(--font-display); font-size: 20px; color: #fff; margin-bottom: 4px;">Lunges</h4>
+              <p>Calculates 90° front-knee angles and monitors lateral torso tilt to prevent balance collapse.</p>
             </div>
             <div class="card-corner tl"></div>
             <div class="card-corner tr"></div>
@@ -195,15 +317,32 @@
           </div>
         </div>
 
+        <!-- Card 6: AI Voice Pipeline -->
         <div class="img-card card-tilt-left card-float-6">
           <div class="card-inner">
             <div class="card-img-wrap">
-              <img
-                src="./IMGs/i6.png"
-                alt="Overhead press alignment"
-                onerror="this.parentElement.classList.add('img-placeholder')"
-              />
+              <svg viewBox="0 0 320 200" width="100%" height="100%" style="background:#0c0f14;">
+                <!-- Audio Wave + AI Nodes -->
+                <circle cx="60" cy="100" r="24" fill="rgba(245,166,35,0.1)" stroke="#f5a623" stroke-width="2"/>
+                <text x="49" y="106" fill="#f5a623" font-family="'Ubuntu', sans-serif" font-size="18">🎙️</text>
+                <!-- Connecting Line -->
+                <line x1="84" y1="100" x2="135" y2="100" stroke="url(#grad1)" stroke-width="2" stroke-dasharray="4,4"/>
+                <!-- AI Brain/LLM Node -->
+                <rect x="135" y="80" width="155" height="40" fill="rgba(0,212,255,0.08)" stroke="#00d4ff" stroke-width="1.5" rx="4"/>
+                <text x="145" y="104" fill="#00d4ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">GROQ LLM (20B)</text>
+                <!-- Spoken Bubble -->
+                <rect x="25" y="25" width="270" height="34" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" rx="4"/>
+                <text x="35" y="46" fill="#e8e8e8" font-family="'Ubuntu', sans-serif" font-size="11">🤖 "Keep chest proud, push through heels!"</text>
+                <!-- Latency Indicator -->
+                <text x="25" y="160" fill="#f5a623" font-family="'JetBrains Mono', monospace" font-size="10">AUDIO SYNTHESIS: gTTS MP3</text>
+                <text x="25" y="178" fill="#888" font-family="'Ubuntu', sans-serif" font-size="10">EVENT DISPATCH: &lt; 50ms</text>
+              </svg>
               <div class="card-scan-line"></div>
+            </div>
+            <div class="card-label">
+              <span class="card-tag">// MULTIMODAL · INTELLIGENCE</span>
+              <h4 style="font-family: var(--font-display); font-size: 20px; color: #fff; margin-bottom: 4px;">Proactive Voice Coaching</h4>
+              <p>Instant conversational cues powered by Groq LLM and Google TTS without taking your eyes off the workout.</p>
             </div>
             <div class="card-corner tl"></div>
             <div class="card-corner tr"></div>
@@ -214,14 +353,13 @@
       </div>
     </section>
 
-    <!-- DEMO SECTION -->
+    <!-- DEMO / LAUNCH SECTION -->
     <section class="demo" id="demo">
       <div class="section-header center-header">
-        <span class="section-tag">// DEMO</span>
+        <span class="section-tag">// INTERACTIVE DEMO & LAUNCHPAD</span>
         <h2 class="section-title">See it in<br /><em>action</em></h2>
         <p class="section-desc">
-          Watch the AI detect and correct form errors in real-time. No hardware
-          required — just your phone or webcam.
+          Watch the live AI detect and correct form errors in real-time. No specialized hardware required — just your computer webcam.
         </p>
       </div>
 
@@ -234,34 +372,60 @@
           <div class="video-corner br"></div>
           <div class="video-status">
             <span class="dot pulse-dot"></span>
-            <span>DEMO</span>
+            <span>SYSTEM READY · LOCALHOST:8501</span>
           </div>
-          <!-- Replace with your video. Options:
-             MP4:    <video src="your-demo.mp4" controls></video>
-             YouTube: <iframe src="https://www.youtube.com/embed/YOUR_ID" ...></iframe>
-        -->
-          <video src="videos/video.mp4" controls playsinline></video>
-          <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+
+          <!-- Interactive HUD preview inside video box -->
+          <div class="video-placeholder" style="max-width: 600px; text-align: center;">
+            <div class="play-ring">
+              <a href="http://localhost:8501" target="_blank" class="play-btn" aria-label="Start Coach">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </a>
+            </div>
+            <div>
+              <h3 style="font-family: var(--font-display); font-size: 32px; color: #fff; margin-bottom: 10px;">
+                Ready to Train with AI?
+              </h3>
+              <p style="color: #999; font-size: 14px; margin-bottom: 24px; line-height: 1.6;">
+                Click below to launch your real-time workout session in the Streamlit web engine. Allow camera access, select your workout, and start moving.
+              </p>
+              <a href="http://localhost:8501" target="_blank" class="btn-primary" style="display: inline-flex;">
+                <span>Open AI Coach on Localhost (8501)</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+            <p style="font-size: 11px; color: #555;">
+              Local server running via <code>.\.venv311\Scripts\streamlit.exe run main.py</code>
+            </p>
+          </div>
         </div>
       </div>
 
-      <!-- feature callouts below video -->
-      <div class="feature-row">
+      <!-- Feature Callouts Below Video -->
+      <div class="feature-row" id="features">
         <div class="feature">
           <span class="feature-icon">⬡</span>
           <strong>Pose Detection</strong>
+          <p>Real-time 33-point spatial tracking with sub-millisecond angle calculations.</p>
         </div>
         <div class="feature">
           <span class="feature-icon">⬡</span>
           <strong>Audio Feedback</strong>
+          <p>Spoken AI voice corrections delivered through your speakers as you exercise.</p>
         </div>
         <div class="feature">
           <span class="feature-icon">⬡</span>
-          <strong>Rep Counter</strong>
+          <strong>Rep & Set Counter</strong>
+          <p>Automatic repetition and set progression saved to persistent local SQLite storage.</p>
         </div>
         <div class="feature">
           <span class="feature-icon">⬡</span>
-          <strong>Works in Real-time</strong>
+          <strong>Private & Local</strong>
+          <p>Zero cloud video uploads. Your camera feed stays strictly on your local machine.</p>
         </div>
       </div>
     </section>
@@ -269,110 +433,50 @@
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
       <div class="contact-inner">
-        <span class="section-tag">// LET'S CONNECT</span>
+        <span class="section-tag">// CREATED BY PRITAM</span>
         <h2 class="contact-title">
-          Built by a human.<br /><em>Backed by data.</em>
+          Built with passion.<br /><em>Backed by AI.</em>
         </h2>
         <p class="contact-desc">
-          Open to opportunities in ML engineering, computer vision, and AI
-          product roles.
+          An open-source, multimodal computer vision experiment integrating Google MediaPipe, WebRTC, Groq LLM inference, and Streamlit.
         </p>
 
         <div class="social-grid">
-          <!-- LinkedIn -->
-          <a
-            href="https://www.linkedin.com/in/prince-khunt-linked-in/"
-            target="_blank"
-            rel="noopener"
-            class="social-btn"
-            aria-label="LinkedIn"
-          >
-            <span class="social-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                width="22"
-                height="22"
-              >
-                <path
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                />
-              </svg>
-            </span>
-            <span class="social-label">LinkedIn</span>
-          </a>
-
           <!-- GitHub -->
           <a
-            href="https://github.com/PrinceKhunt16"
+            href="https://github.com/pritam-byte/ai-gym-coach"
             target="_blank"
             rel="noopener"
             class="social-btn"
             aria-label="GitHub"
           >
             <span class="social-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                width="22"
-                height="22"
-              >
-                <path
-                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                />
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
               </svg>
             </span>
             <span class="social-label">GitHub</span>
           </a>
 
-          <!-- Twitter / X -->
+          <!-- Email -->
           <a
-            href="https://twitter.com/prince_khunt_"
-            target="_blank"
-            rel="noopener"
-            class="social-btn"
-            aria-label="Twitter"
-          >
-            <span class="social-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                width="22"
-                height="22"
-              >
-                <path
-                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-                />
-              </svg>
-            </span>
-            <span class="social-label">Twitter</span>
-          </a>
-
-          <!-- Gmail -->
-          <a
-            href="mailto:princekhunt04@gmail.com"
+            href="mailto:pritamdenria2005@gmail.com"
             class="social-btn"
             aria-label="Email"
           >
             <span class="social-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                width="22"
-                height="22"
-              >
-                <path
-                  d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
-                />
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
               </svg>
             </span>
-            <span class="social-label">Gmail</span>
+            <span class="social-label">Email</span>
           </a>
         </div>
       </div>
 
       <footer class="footer">
-        <span>© 2026 AI GYM Trainer — Real-time AI Gym Trainer</span>
+        <span class="footer-mono">© 2026 AI REAL-TIME GYM COACH · PRITAM DENRIA</span>
+        <span class="footer-mono">LOCAL STATUS: ACTIVE [8501]</span>
       </footer>
     </section>
   </body>

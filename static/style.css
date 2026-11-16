@@ -1,181 +1,287 @@
-/* =========================================================
-   GLOBAL THEME
-========================================================= */
+/* ============================================================
+   AI REAL-TIME GYM COACH — UNIFIED STREAMLIT THEME
+   Inspired by & synchronized with the Landing Page Design System
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Instrument+Serif:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  --bg:          #0a0a0a;
+  --surface:     #111111;
+  --surface-alt: #16181f;
+  --border:      rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(245, 166, 35, 0.3);
+  --amber:       #f5a623;
+  --amber-dim:   #b97a18;
+  --amber-glow:  rgba(245, 166, 35, 0.18);
+  --cyan:        #00d4ff;
+  --cyan-glow:   rgba(0, 212, 255, 0.15);
+  --text:        #e8e8e8;
+  --muted:       #888888;
+  --font-display:'Instrument Serif', serif;
+  --font-body:   'Ubuntu', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:   'JetBrains Mono', monospace;
+  --radius:      0px;
+}
+
+/* ============================================================
+   GLOBAL APP & BACKGROUND
+   ============================================================ */
 
 .stApp {
-  background-color: #0A0D14;
-  color: #fff;
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: var(--font-body) !important;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
+
+/* Scoped layout container */
+.block-container {
+  padding: 40px 2.5rem !important;
+  max-width: 860px !important;
+}
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
 
 [data-testid="stSidebar"] {
-  background-color: #111520;
+  background-color: #0d0f14 !important;
+  border-right: 1px solid var(--border) !important;
 }
 
-/* =========================================================
-   TYPOGRAPHY (SCOPED – safer)
-========================================================= */
-
-.block-container,
-.block-container * {
-  font-family: 'AdobeClean', sans-serif !important;
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+  font-family: var(--font-display) !important;
+  letter-spacing: 0.02em;
 }
 
-/* =========================================================
-   LAYOUT
-========================================================= */
-
-.block-container {
-  padding: 50px 3rem !important;
-  max-width: 750px !important;
+[data-testid="stSidebar"] .stMarkdown p {
+  color: var(--muted);
 }
 
-/* =========================================================
-   BUTTONS
-========================================================= */
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+h1 {
+  font-family: var(--font-display) !important;
+  font-size: clamp(38px, 5vw, 56px) !important;
+  font-weight: 400 !important;
+  line-height: 1.05 !important;
+  letter-spacing: 0.02em !important;
+  background: linear-gradient(135deg, #ffffff 40%, var(--amber) 80%, var(--cyan) 100%);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  margin-bottom: 0.4rem !important;
+}
+
+h2, h3 {
+  font-family: var(--font-display) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  color: #fff !important;
+}
+
+h4 {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--muted) !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+p, span, label {
+  font-family: var(--font-body) !important;
+}
+
+/* ============================================================
+   BUTTONS (CYBER AMBER ACCENTS)
+   ============================================================ */
 
 button,
 .stButton button,
-.stDownloadButton button,
-.MuiBox-root button {
-  background-color: #181D2A !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 0 !important;
-  font-family: 'AdobeClean', sans-serif !important;
+[data-testid="stBaseButton-secondaryFormSubmit"],
+[data-testid="stBaseButton-primary"],
+.stDownloadButton button {
+  background: var(--amber) !important;
+  color: #000000 !important;
+  font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  border: 1px solid var(--amber) !important;
+  border-radius: var(--radius) !important;
+  padding: 10px 24px !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 18px var(--amber-glow) !important;
 }
 
-/* =========================================================
-   INPUTS & TEXT ELEMENTS
-========================================================= */
-
-input,
-textarea,
-p,
-li,
-code,
-[data-testid="stSelectbox"] > div > div,
-[data-baseweb="select"] > div,
-[data-baseweb="popover"] ul,
-[data-baseweb="menu"] {
-  border-radius: 0 !important;
-  font-family: 'AdobeClean', sans-serif !important;
+button:hover,
+.stButton button:hover,
+[data-testid="stBaseButton-secondaryFormSubmit"]:hover {
+  background: #ffc04d !important;
+  color: #000000 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 30px rgba(245, 166, 35, 0.35) !important;
 }
 
-/* =========================================================
-   METRICS
-========================================================= */
+button:active,
+.stButton button:active {
+  transform: translateY(0) !important;
+}
+
+/* Secondary / Ghost buttons */
+[data-testid="stBaseButton-secondary"] {
+  background: rgba(255, 255, 255, 0.03) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: none !important;
+}
+
+[data-testid="stBaseButton-secondary"]:hover {
+  border-color: var(--amber) !important;
+  color: var(--amber) !important;
+  background: rgba(245, 166, 35, 0.06) !important;
+}
+
+/* ============================================================
+   METRICS TILES (HUD KINEMATICS)
+   ============================================================ */
 
 [data-testid="stMetric"] {
-  background-color: #181D2A;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 1rem 1.2rem;
-  border-radius: 0;
+  background-color: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-left: 3px solid var(--amber) !important;
+  padding: 16px 20px !important;
+  border-radius: var(--radius) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-[data-testid="stMetric"] div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+[data-testid="stMetric"]:hover {
+  border-color: var(--border-glow) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 20px var(--amber-glow) !important;
 }
 
 [data-testid="stMetricValue"] {
-  font-size: 1.5rem !important;
+  font-family: var(--font-display) !important;
+  font-size: 2rem !important;
+  color: var(--amber) !important;
   font-weight: 400 !important;
 }
 
 [data-testid="stMetricLabel"] {
-  font-size: 15px !important;
-  opacity: 0.6;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: var(--muted) !important;
 }
 
-[data-testid="stMetric"] div label p {
-  font-size: 16px !important;
+/* ============================================================
+   INPUTS & FORM CONTROLS
+   ============================================================ */
+
+input,
+textarea,
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input,
+[data-baseweb="select"] > div {
+  background-color: #14171f !important;
+  border: 1px solid var(--border) !important;
+  color: #ffffff !important;
+  border-radius: var(--radius) !important;
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
 }
 
-/* =========================================================
-   CONTAINERS / CARDS
-========================================================= */
-
-.stContainer,
-.stExpander,
-.stTabs,
-.stColumns,
-.stPopover,
-.stAlertContainer,
-.stStatusContainer,
-.stMetric,
-.stTable,
-.stDataFrame,
-.stForm,
-.stSelectbox,
-[data-baseweb="select"] > div,
-[data-testid="stForm"],
-[data-testid="stMetric"],
-[data-testid="stNumberInputContainer"],
-[data-testid="stDataFrameColumnMenu"],
-[data-testid="stHeadingWithActionElements"],
-[data-testid="stCaptionContainer"] p,
-[data-testid="stAlertContentInfo"] p,
-[data-testid="stSidebarNavLink"],
-[data-testid="stMarkdownContainer"] h3,
-[data-baseweb="popover"],
-[data-baseweb="menu"],
-div[role="menu"],
-div[role="menuitem"] {
-  border-radius: 0 !important;
-  font-family: 'AdobeClean', sans-serif !important;
+input:focus,
+textarea:focus,
+[data-baseweb="select"] > div:focus-within {
+  border-color: var(--amber) !important;
+  box-shadow: 0 0 15px var(--amber-glow) !important;
 }
 
-/* =========================================================
-   DATAFRAME FIX
-========================================================= */
-
-.stDataFrame,
-.stDataFrame div,
-.stDataFrameGlideDataEditor {
-  border-radius: 0 !important;
-  font-family: 'AdobeClean', sans-serif !important;
+[data-testid="stForm"] {
+  background-color: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  padding: 28px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* =========================================================
-   INTERACTIVE ELEMENTS
-========================================================= */
+/* ============================================================
+   TABLES & DATAFRAMES (WORKOUT HISTORY)
+   ============================================================ */
 
-.stTextInput,
-.stTextArea,
-.stNumberInput,
-.stSlider,
-.stMultiselect,
-.stRadio,
-.stCheckbox,
-.stToggle,
-.stFileUploader,
-.stColorPicker,
-.stDateInput,
-.stTimeInput,
-.stCameraInput,
-[data-testid="stTextInput"] > div,
-[data-testid="stButton"] button,
-[data-testid="stBaseButton-secondaryFormSubmit"],
-[data-testid="stStatusWidget"] {
-  border-radius: 0 !important;
-  font-family: 'AdobeClean', sans-serif !important;
+table, [data-testid="stTable"] {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  background-color: var(--surface) !important;
+  border: 1px solid var(--border) !important;
 }
 
-/* =========================================================
-   MARKDOWN
-========================================================= */
-
-[data-testid="stMarkdownContainer"] strong {
-  font-family: 'AdobeClean', sans-serif !important;
+table th {
+  background-color: #16181f !important;
+  color: var(--amber) !important;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  padding: 12px 16px !important;
+  border-bottom: 1px solid var(--border) !important;
 }
 
-/* =========================================================
-   FORM
-========================================================= */
+table td {
+  padding: 12px 16px !important;
+  font-family: var(--font-mono) !important;
+  font-size: 13px !important;
+  color: var(--text) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
 
-.stForm {
-  margin-top: 2rem !important;
-  padding: 1.5rem 1rem !important;
-  background-color: #181D2A !important;
-  color: #fff;
+table tr:hover td {
+  background-color: rgba(245, 166, 35, 0.03) !important;
+}
+
+/* ============================================================
+   WEBRTC CAMERA STREAMER CONTAINER
+   ============================================================ */
+
+div[data-testid="stVerticalBlock"]:has(iframe[title="streamlit_webrtc.webrtc_streamer"]) {
+  border: 1px solid rgba(245, 166, 35, 0.3) !important;
+  background: #0d0d0d !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px var(--amber-glow) !important;
+}
+
+/* ============================================================
+   ALERTS & FEEDBACK NOTIFICATIONS
+   ============================================================ */
+
+.stAlert {
+  background-color: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+}
+
+[data-testid="stAlertContentSuccess"] {
+  border-left: 3px solid var(--cyan) !important;
+  color: #fff !important;
+}
+
+[data-testid="stAlertContentInfo"] {
+  border-left: 3px solid var(--amber) !important;
+  color: #fff !important;
+}
+
+hr {
+  border-color: var(--border) !important;
+  margin: 28px 0 !important;
 }
